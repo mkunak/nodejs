@@ -13,5 +13,10 @@
     "name": "Jane Lee",
     "age": "25",
     "job": "Team leader"
+  },
+  {
+    "name": "Nikita Kunak",
+    "age": "10",
+    "job": "pupil"
   }
 ]
