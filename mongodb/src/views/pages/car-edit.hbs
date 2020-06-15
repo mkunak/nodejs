@@ -1,0 +1,55 @@
+<h2>Edit info about <b>{{car.brand}} {{car.model}}</b></h2>
+
+<div class="row">
+  <form class="col s12" action="/cars/edit" method="POST">
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="brand" name="brand" type="text" class="validate" required value={{car.brand}}>
+        <label for="brand">Brand</label>
+        <span class="helper-text" data-error="Add brand name"></span>
+      </div>
+      <div class="input-field col s6">
+        <input id="model" name="model" type="text" class="validate" required value={{car.model}}>
+        <label for="model">Model</label>
+        <span class="helper-text" data-error="Add model"></span>
+      </div>
+    </div>
+
+    <input name="_id" type="hidden" value={{car._id}}>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="image" name="image" type="text" class="validate" required value={{car.image}}>
+        <label for="image">Image</label>
+        <span class="helper-text" data-error="Add image url"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="description" name="description" type="text" class="validate" required value={{car.description}}>
+        <label for="description">Description</label>
+        <span class="helper-text" data-error="Add description"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" name="email" type="email" class="validate" required value={{car.email}}>
+        <label for="email">Email</label>
+        <span class="helper-text" data-error="Enter email correct"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        The car costs:
+        <div class="input-field inline">
+          <input id="email_inline" name="price" min="1" type="number" step="0.01" class="validate" required
+            value={{car.price}}>
+          <label for="email_inline">Price</label>
+          <span class="helper-text" data-error="Enter price correct"></span>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Apply changes</button>
+  </form>
+</div>

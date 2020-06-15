@@ -1,0 +1,30 @@
+<h1>Cars</h1>
+
+{{#if cars.length}}
+<div class="row">
+  {{#each cars}}
+  <div class="col s4">
+    <div class="card">
+      <div class="card-image">
+        <img src={{this.image}} style="height: 15rem">
+      </div>
+      <div class="card-content">
+        <span class="card-title" style="background-color: #37474f7a;">{{this.brand}} {{this.model}}</span>
+        <h5 class="price">{{this.price}}</h5>
+        <h6>{{this.email}}</h6>
+      </div>
+      <div class="card-action">
+        <a href="/cars/{{this._id}}" target="_blank">More info</a>
+        <a href="/cars/{{this._id}}/edit?allow=true">Edit info</a>
+        <form action="/cart/add" method="POST">
+          <input type="hidden" name="_id" value={{this._id}} />
+          <button type="submit" class="btn btn-primary">Add to cart</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{else}}
+<p>Car list is empty</p>
+{{/if }}
