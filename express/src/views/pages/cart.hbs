@@ -1,0 +1,43 @@
+<h1>Cars Cart</h1>
+
+<div class="cart">
+  {{#if cars.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Count</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th class="price">{{price}}</th>
+        <th></th>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      {{#each cars}}
+      <tr>
+        <td>{{this.brand}} {{this.model}}</td>
+        <td><img src="{{this.image}}" height="50" alt="{{this.brand}} {{this.model}}"></td>
+        <td>{{this.count}}</td>
+        <td>{{this.price}}</td>
+        <td>
+          <button class="btn teal btn-small js-add" data-id="{{this._id}}">Add</button>
+          <button class="btn red btn-small js-remove" data-id="{{this._id}}">Del</button>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+  <p>Cart is empty</p>
+  {{/if}}
+</div>

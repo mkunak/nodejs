@@ -1,0 +1,32 @@
+.nav-wrapper {
+  padding-left: 10rem;
+  padding-right: 3rem;
+}
+
+.input-field {
+  margin-top: .1rem;
+  margin-bottom: .1rem;
+}
+
+.input-field.inline input, .input-field.inline .select-dropdown {
+  margin-bottom: .2rem;
+}
+
+.car {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car h1 {
+  margin-bottom: 2rem;
+}
+
+.car img {
+  width: 40rem;
+}
+
+.car .price.big {
+  font-size: 3rem;
+}
